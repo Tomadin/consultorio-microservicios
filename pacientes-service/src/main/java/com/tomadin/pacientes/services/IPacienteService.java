@@ -7,7 +7,7 @@ import com.tomadin.pacientes.entities.Paciente;
 import java.util.List;
 
 public interface IPacienteService {
-    public List<Paciente> getAll();
+    public List<PacienteResponse> getAll();
     public PacienteResponse save(PacienteRequest request);
     public void delete(Long id);
     public PacienteResponse findById(Long id);

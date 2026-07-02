@@ -15,7 +15,9 @@ public class Paciente {
     private Long idPaciente;
     private String nombre;
     private String apellido;
+    @Column(unique = true, nullable = false)
     private String dni;
+    @Column(name = "fecha_nac")
     private LocalDate fechaNac;
     private String telefono;
 
