@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{url}}/api/v1/pacientes"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"nombre\": \"Ronaldo\",\r
+
+    \    \"apellido\": \"Naco\",\r
+
+    \    \"dni\": \"09876123\",\r
+
+    \    \"fechaNac\": \"2025-08-01\",\r
+
+    \    \"telefono\": \"2619234567\"\r
+
+    }"
+order: 2419733955465353
