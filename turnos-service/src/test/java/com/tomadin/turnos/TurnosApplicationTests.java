@@ -1,10 +1,10 @@
-package com.tomadin.turnos_service;
+package com.tomadin.turnos;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TurnosServiceApplicationTests {
+class TurnosApplicationTests {
 
 	@Test
 	void contextLoads() {

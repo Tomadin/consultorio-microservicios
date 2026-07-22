@@ -46,6 +46,12 @@ public class PacienteController {
         return ResponseEntity.ok(pacienteService.findById(id));
     }
 
+    // Obtener un paciente por su DNI
+    @GetMapping("/dni/{dni}")
+    public ResponseEntity<PacienteResponse> obtenerPorDni(@PathVariable String dni) {
+        return ResponseEntity.ok(pacienteService.findByDni(dni));
+    }
+
     // Editar un paciente existente
     @PutMapping("/{id}")
     public ResponseEntity<PacienteResponse> actualizar(@PathVariable Long id,

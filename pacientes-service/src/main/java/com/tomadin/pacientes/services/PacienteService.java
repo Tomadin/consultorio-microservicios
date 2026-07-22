@@ -55,6 +55,14 @@ public class PacienteService implements IPacienteService{
     }
 
     @Override
+    @Transactional(readOnly = true)
+    public PacienteResponse findByDni(String dni) {
+        Paciente paciente = repository.findByDni(dni)
+                .orElseThrow(() -> new NotFoundException("No se ha encontrado el paciente con DNI: " + dni));
+        return mapper.toResponse(paciente);
+    }
+
+    @Override
     @Transactional
     public PacienteResponse update(Long id, PacienteRequest request) {
         Paciente paciente = buscarPorId(id);

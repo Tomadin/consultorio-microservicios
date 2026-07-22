@@ -11,5 +11,6 @@ public interface IPacienteService {
     public PacienteResponse save(PacienteRequest request);
     public void delete(Long id);
     public PacienteResponse findById(Long id);
+    public PacienteResponse findByDni(String dni);
     public PacienteResponse update(Long id, PacienteRequest request);
 }
